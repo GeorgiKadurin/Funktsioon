@@ -3,8 +3,51 @@ from math import*
 from random import*
 from module1 import *
 
-#(3)
+#7
+print("Задание 7")
+spin7=date
 
+print()
+print()
+
+
+
+#6
+print("Задание 6")
+spin6=is_prime(int(input("Напишите число ")))
+print(spin6)
+print()
+print()
+
+
+#5
+print("Задание 5")
+spin5=bankk(float(input("a:")),int(input("yea:")))
+print(spin5)
+print()
+print()
+
+#spin5=bankk(float(input("a:")),input("yea:"))
+#print(spin5)
+
+#n=int(input("Сколько у Вас денег?""\n""-> "))
+#years = int(input("На сколько лет хотите сделать вклад?""\n""-> "))
+#spin5=bankk
+#print(spin5)
+
+
+#4
+print("Задание 4")
+spin4=season(int(input("m: ")))
+print(spin4)
+print()
+print()
+
+
+#3
+print("Задание 3")
+spin3=square(float(input("Напишите значение  ")))
+print(spin3)
 
 
 
