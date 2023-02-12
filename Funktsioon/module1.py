@@ -80,19 +80,17 @@ def season(m:int)->any:
 
 
 
+#3
 def square(tehe:float)->any:
     """
     Määrme square...
     :parem tehe a2: Järjend square numbridest
     :rtype: str
     """
-    tehe=a*4
-
-
-
-
-
-
+    a = tehe * 4
+    b = tehe**2
+    c = (tehe * 1.414)//1
+    return a,b,c
 
 
 
