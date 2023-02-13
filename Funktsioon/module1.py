@@ -1,50 +1,71 @@
 
+#8
+
+
+
+
+
+
 
 
 #7
-def date(d:int,m:int,y:int)->any:
+from datetime import*
+def date_(d:int,m:int,y:int)->bool:
     """
     Määrme date..
     :parem int d,int m, int y:Järjend date numbridest
-    :rtype: str
+    :rtype: bool
     """
-
-
+    try:
+        print(date(y,m,d))
+        flag=True
+    except :
+        print("Viga")
+        flag=False
+    return flag
 
 
 #6
-def is_prime(arv:int)->any:
+def is_prime(arv:int)->bool:
     """
     Määrme is_prime...
     :parem int arv: Järjend is_prime numbridest
-    :rtype: str
+    :rtype: bool
     """
-
+    flag = True
     for i in range(2,arv):
+
         if arv%i==0:
-            return False
+            flag = False
+            break
+       
+    return flag
 
-    if arv==1:
-        return False
 
-    return True
+
+
+
+
+
+
+
 #5
-def bankk(yea:float, a:float)->int:
+def bankk(aa:int, b:float)->float:
     """
     Määrme bank....
-    :parem float yea, float a: Järjend bank numbridest
+    :parem int yea, float a: Järjend bank numbridest
     :rtype: str
     """
 
-    vast=a*(1+1/10)**yea
-    return vast
-
+    for i in range(aa):
+       b=b+b*0.1
+    return b 
 
 
     #i=0
     #while i>0:
     #    for i in range(yea):
-    #        a*=1.1
+    #        a*=0.1
     #    return a
 
 
@@ -54,9 +75,20 @@ def bankk(yea:float, a:float)->int:
     #    i=i+1
     #return a
 
+    ##bool = исп при труе или фолсе
+
+
+
+
+
+
+
+
+
+
 
 #4
-def season(m:int)->any:
+def season(m:int)->str:
     """
     Määrme season...
     :parem int m: Järjend season numbridest
@@ -80,6 +112,13 @@ def season(m:int)->any:
 
 
 
+
+
+
+
+
+
+
 #3
 def square(tehe:float)->any:
     """
@@ -87,9 +126,9 @@ def square(tehe:float)->any:
     :parem tehe a2: Järjend square numbridest
     :rtype: str
     """
-    a = tehe * 4
+    a = tehe*4
     b = tehe**2
-    c = (tehe * 1.414)//1
+    c = (tehe*1.414)//1
     return a,b,c
 
 
@@ -137,7 +176,3 @@ def arithmetic(a:float,faraon:str, b:float)->any:
     else:
          vastus="Tundmatu tehe"
     return vastus
-
-
-
-
