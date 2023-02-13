@@ -1,85 +1,178 @@
-﻿
-from math import*
-from random import*
-from module1 import *
+
+#8
+
+
+
+
+
+
+
 
 #7
-print("Задание 7")
-spin7=date
-
-print()
-print()
-
+from datetime import*
+def date_(d:int,m:int,y:int)->bool:
+    """
+    Määrme date..
+    :parem int d,int m, int y:Järjend date numbridest
+    :rtype: bool
+    """
+    try:
+        print(date(y,m,d))
+        flag=True
+    except :
+        print("Viga")
+        flag=False
+    return flag
 
 
 #6
-print("Задание 6")
-spin6=is_prime(int(input("Напишите число ")))
-print(spin6)
-print()
-print()
+def is_prime(arv:int)->bool:
+    """
+    Määrme is_prime...
+    :parem int arv: Järjend is_prime numbridest
+    :rtype: bool
+    """
+    flag = True
+    for i in range(2,arv):
+
+        if arv%i==0:
+            flag = False
+            break
+       
+    return flag
+
+
+
+
+
+
+
 
 
 #5
-print("Задание 5")
-spin5=bankk(float(input("a:")),int(input("yea:")))
-print(spin5)
-print()
-print()
+def bankk(aa:int, b:float)->float:
+    """
+    Määrme bank....
+    :parem int yea, float a: Järjend bank numbridest
+    :rtype: str
+    """
 
-#spin5=bankk(float(input("a:")),input("yea:"))
-#print(spin5)
+    for i in range(aa):
+       b=b+b*0.1
+    return b 
 
-#n=int(input("Сколько у Вас денег?""\n""-> "))
-#years = int(input("На сколько лет хотите сделать вклад?""\n""-> "))
-#spin5=bankk
-#print(spin5)
+
+    #i=0
+    #while i>0:
+    #    for i in range(yea):
+    #        a*=0.1
+    #    return a
+
+
+    #i=0
+    #while i<yea:
+    #    a=float(a+a*0.1)
+    #    i=i+1
+    #return a
+
+    ##bool = исп при труе или фолсе
+
+
+
+
+
+
+
+
+
 
 
 #4
-print("Задание 4")
-spin4=season(int(input("m: ")))
-print(spin4)
-print()
-print()
+def season(m:int)->str:
+    """
+    Määrme season...
+    :parem int m: Järjend season numbridest
+    :rtype: str
+    """
+    if  m in (12,1,2):
+        vas= "talv"
+    elif m in (3,4,5):
+        vas="kevad"
+    elif m in (6,7,8):
+        vas="suvi"
+    elif m in (9,10,11):
+        vas="sügis"
+    else:
+        vas="Viga"
+    return vas
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #3
-print("Задание 3")
-spin3=square(float(input("Напишите значение  ")))
-print(spin3)
+def square(tehe:float)->any:
+    """
+    Määrme square...
+    :parem tehe a2: Järjend square numbridest
+    :rtype: str
+    """
+    a = tehe*4
+    b = tehe**2
+    c = (tehe*1.414)//1
+    return a,b,c
 
 
 
 
+#2
 
+def  is_year_leap(a1:int)->bool:
+    """
+    Määrme is_year_leap...
+    :parem int a1: Järjend is_year_leap numbridest
+    :rtype: str
+    """
+    if a1%4==0:
+         t=True 
 
+    else:
+        t= False
 
-print()
-print()
-# (2)
-spin2=is_year_leap(float(input("a1: ")))
-print(spin2)
-    
+    return t
+        
 
+       
 
+#1
 
-print()
-print()
-# (1)
-spin=arithmetic(float(input("a:")),input("faraon:"),float(input("b:")))
-print(spin)
+def arithmetic(a:float,faraon:str, b:float)->any:
+    """
+    Määrme arithmetic....
+    :parem str faraon,float a, float b: Järjend arithmetic numbridest
+    :rtype: str
+    """
+    if faraon=='+':
+        vastus= a+b
+    elif faraon=="-":
+        vastus= a-b
+    elif faraon=="*":
+        vastus= a*b
+    elif faraon=="/":
+        if b==0:
+            vastus="DIV0"
+        else:
+            vastus=a/b
 
-
-
-#a=int(input("Введите первое число: "))
-#b=int(input("Введите второе число: "))
-#print("Результат: ", a , b)
-
-
-
-
-
-
-
-
+    else:
+         vastus="Tundmatu tehe"
+    return vastus
